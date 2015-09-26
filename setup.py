@@ -2,9 +2,9 @@ import platform
 import sys
 from distutils.core import setup
 
-from path_helpers import path
+import os.path
 
-root_dir = path(__file__).parent.abspath()
+root_dir = os.path.abspath(os.path.join(__file__, os.pardir))
 if root_dir not in sys.path:
     sys.path.insert(0, str(root_dir))
 import version
