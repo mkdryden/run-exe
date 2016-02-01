@@ -45,8 +45,9 @@ def run_exe(exe, params, try_admin=False, force_admin=False, working_dir=None):
                 if return_code == 0:
                     return ''
                 else:
-                    raise RuntimeError('Process returned error code: %s' %
-                                       return_code)
+                    raise RuntimeError('Error running: %s %s\n  (in %s).\n'
+                                       'Process returned error code: %s' %
+                                       (exe, params, os.getcwd(), return_code))
             except pywintypes.error, e:
                 if e.winerror == 1223:  # Error 1223 is elevation cancelled.
                     raise CancelAction(e.strerror)
