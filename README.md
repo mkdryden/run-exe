@@ -1,4 +1,3 @@
-![https://ci.appveyor.com/api/projects/status/github/wheeler-microfluidics/run-exe?branch=master&svg=true](https://ci.appveyor.com/api/projects/status/github/wheeler-microfluidics/run-exe?branch=master&svg=true)
 # Overview #
 
 Run executable file, with option to try as admin on error on Windows. 
